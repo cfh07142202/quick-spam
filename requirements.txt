@@ -1,5 +1,0 @@
-pyautogui
-sys  
-Keyboard  
-time 
-colorama
