@@ -5,9 +5,13 @@ import keyboard as key
 from colorama import init, Fore
 init(autoreset=True)
 fast_or_slow = None
+def button_spam():
+    for _ in range(how_many_times_costom_button_spam):
+            py.press(what_button_to_spam)
+            ti.sleep(interval_costem_button_spam)
 def tool_opps():
     print("what tool do you want to use")
-    print("auto clicker[1]")
+    print("auto clicker[1]soon")
     print("text spammer[2]")
     print("costom spammer[3]")
     print("info[4]")
@@ -34,6 +38,7 @@ while what_tool == "":
     print(Fore.RED + "this can't be null")
     what_tool = input(":")
 if what_tool == "4":
+    clear()
     print("mouse position")
     print(py.position())
     print("screen size")
@@ -84,7 +89,26 @@ elif what_tool == "2":
         slow_mode()
 elif what_tool == "3":
     clear()
-    what_button_to_spam = input("what button do you want to spam?")
+    what_button_to_spam = input("what button do you want to spam?:")
+    while what_button_to_spam == "":
+        print(Fore.RED + "this can not be null")
+    clear()
+    while True:
+        try:
+            how_many_times_costom_button_spam = int(input(f"how many times do you want to spam {what_button_to_spam}?:"))
+            break
+        except ValueError:
+            clear()
+            print(Fore.RED + "invaild number")
+    while True:
+        try:
+            interval_costem_button_spam = float(input("interval between key presses?:"))
+            break
+        except ValueError:
+            print(Fore.RED + "invaild number")
+    print("press s to start")
+    key.wait("s")
+    button_spam()
 else:
     print(Fore.RED + f"{what_tool} is not vaild")
 input("\n")
