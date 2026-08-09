@@ -6,9 +6,10 @@ from colorama import init, Fore
 init(autoreset=True)
 fast_or_slow = None
 def button_spam():
-    for _ in range(how_many_times_costom_button_spam):
+    for counter in range(how_many_times_costom_button_spam):
             py.press(what_button_to_spam)
             ti.sleep(interval_costem_button_spam)
+            print(f"{counter}/{how_many_times_costom_button_spam}")
 def tool_opps():
     print("what tool do you want to use")
     print("auto clicker[1]soon")
@@ -16,19 +17,21 @@ def tool_opps():
     print("costom spammer[3]")
     print("info[4]")
 def fast_mode():
-    for _ in range(How_many_times_do_you_want_to_spam):
+    for counter in range(How_many_times_do_you_want_to_spam):
         py.write(what_word_to_SPAM)
         ti.sleep(intervalkey)
         #very tiny hard coded break just so it picks it up
         ti.sleep(0.1)
         py.press("enter")
+        print(f"{counter}/{How_many_times_do_you_want_to_spam}")
 def slow_mode():
-    for _ in range(How_many_times_do_you_want_to_spam):
+    for counter in range(How_many_times_do_you_want_to_spam):
         py.write(what_word_to_SPAM, interval=0.1)
         ti.sleep(intervalkey)
         #very tiny hard coded break just so it picks it up
         ti.sleep(0.1)
         py.press("enter")
+        print(f"{counter}/{How_many_times_do_you_want_to_spam}")
 def clear():
     sys.stdout.write("\x1b[2J\x1b[H")
     sys.stdout.flush()
@@ -38,7 +41,6 @@ while what_tool == "":
     print(Fore.RED + "this can't be null")
     what_tool = input(":")
 if what_tool == "4":
-    clear()
     print("mouse position")
     print(py.position())
     print("screen size")
@@ -108,6 +110,7 @@ elif what_tool == "3":
             print(Fore.RED + "invaild number")
     print("press s to start")
     key.wait("s")
+    py.press("backspace")
     button_spam()
 else:
     print(Fore.RED + f"{what_tool} is not vaild")
