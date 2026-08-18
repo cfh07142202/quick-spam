@@ -2,7 +2,7 @@
 
 A simple Python CLI tool to automate typing clicking and key presses
 
-scripter: proximty/cfh0714    help and ideas: martinezbrandol1011-star/lametra007
+scripter: proximty/cfh0714    help and ideas: martinezbrandol1011
 
 ## you might need to Run the program as administrator
 
