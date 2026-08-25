@@ -1,4 +1,4 @@
-# Quick Spam v0.1
+# Quick Spam
 
 A simple Python CLI tool to automate typing clicking and key presses
 
