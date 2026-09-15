@@ -1,4 +1,5 @@
 # Quick Spam
+not finshed
 
 A simple Python CLI tool to automate typing, mouse clicks, and custom key presses.
 
